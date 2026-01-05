@@ -69,7 +69,8 @@ print(f"Shape iniziale: {df.shape}")
 print(f"Valori nulli:\n{df.isnull().sum()}")
 
 colonne_da_eliminare = ['track_name','album_name','track_name', 'artists','key','mode','time_signature','explicit', 'speechiness','Unnamed: 0', "popularity"]
-# Nota: 'track_name' è ripetuto due volte nella lista originale, non influisce sul drop ma è ridondante.
+
+
 df = df.drop(columns=colonne_da_eliminare, errors='ignore')
 df.to_csv('nuovo_dataset.csv', index=False)
 
@@ -164,7 +165,7 @@ plt.title('Selecting the number of clusters k using the silhouette score')
 plt.grid()
 plt.show()
 
-# K-Means (senza track_id)
+# K-Means 
 df_no_track_id = df_cleaned.drop(columns=['track_id', "track_genre"], errors='ignore')
 print(df_no_track_id.info())
 
@@ -199,10 +200,8 @@ ax.set_zlabel("Componente principale 3")
 plt.colorbar(scatter)
 plt.show()
 
-# K-Means su dataset 'cleaned' completo (numerico)
-# Nota: KMeans richiede input numerico, se df_cleaned ha colonne stringa potrebbe dare errore qui se non gestito.
+# K-Means su dataset 'cleaned' completo
 # Assumiamo df_cleaned sia stato trattato o le colonne stringa ignorate nel fit precedente.
-# Nel codice originale ri-fitta su df_cleaned.
 df_cleaned_numeric = df_cleaned.select_dtypes(include=[np.number])
 kmeans = KMeans(n_clusters=4, random_state=42)
 kmeans_labels = kmeans.fit_predict(df_cleaned_numeric)
@@ -244,7 +243,7 @@ for i in range(4):
     print(df_clustered[df_clustered['Cluster'] == i].describe())
     print("\n")
 
-# Plot medie features
+# Plot features
 cluster_means = df_clustered.groupby('Cluster').mean()
 colors = ['purple', 'blue', 'green', 'yellow']
 cluster_means.T.plot(kind='bar', figsize=(12, 8), color=colors)
@@ -274,7 +273,7 @@ if 1 in distribuzione.index.get_level_values(0):
     plt.ylabel("Percentuale")
     plt.show()
 
-# Plot Silhouette score hardcoded (ripetuto nell'originale)
+# Plot Silhouette score hardcoded 
 silhouette_vals_2 = [0.319,0.303,0.325,0.259,0.232,0.227]
 n_cluster_2 = range(2, 8)
 plt.plot(n_cluster_2, silhouette_vals_2, 'bx-')
