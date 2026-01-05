@@ -1,6 +1,6 @@
 # Clustering Spotify - Tesi di Laurea
 
-Questo repository contiene il codice e i dataset utilizzati per la tesi di laurea in Ingegneria dell'Informazione, dedicata all'applicazione di algoritmi di clustering su un dataset musicale. 
+Questo repository contiene il codice e i dataset utilizzati per la tesi di laurea in Ingegneria dell'Informazione, dedicata all'applicazione di algoritmi di clustering su un dataset musicale estratto tramite API publiche. 
 
 ## Contenuto
 - **Script di clustering**: Applicazione di algoritmi come k-means e DBSCAN per l'analisi delle caratteristiche audio di brani musicali.
