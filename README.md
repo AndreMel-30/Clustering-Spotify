@@ -49,23 +49,21 @@ Il progetto utilizza lo **Spotify Tracks Dataset** (di Maharshi Pandya) disponib
 
 *Alternativa*: Se hai configurato le API di Kaggle, puoi decommentare le righe relative al download automatico all'inizio dello script `clustering_analysis.py`.
 
-## Utilizzo
-
-Esegui lo script principale da terminale:
-
-```bash
-python clustering_analysis.py
-
 ## Risultati e Visualizzazioni
 
+Ecco i grafici generati dalla pipeline di analisi:
 
-###  K-Means Analysis
+### 1. K-Means Analysis
 Determinazione del numero ottimale di cluster e caratterizzazione dei gruppi.
 
-| Elbow Method | Analisi delle Features (Medie) |
-| :---: | :---: |
-| ![Elbow Method](images/ElbowMethod.png) | ![Features per Cluster](images/cluster_features.png) |
+![Elbow Method](images/ElbowMethod.png)
 
-**Visualizzazione 2D dei Cluster (K-Means):**
+### 2. Analisi delle Features
+Confronto delle caratteristiche medie per ogni cluster individuato.
+
+![Features per Cluster](images/cluster_features.png)
+
+### 3. Visualizzazione 3D
+Rappresentazione tridimensionale dei cluster finali.
+
 ![K-Means 3D Plot](images/k-meansResults.png)
-
