@@ -58,22 +58,14 @@ python clustering_analysis.py
 
 ## Risultati e Visualizzazioni
 
-Di seguito sono riportati i grafici generati dalla pipeline di analisi.
 
-### 1. Riduzione Dimensionale
-Visualizzazione preliminare del dataset proiettato in 2D utilizzando PCA e t-SNE.
-![t-SNE Projection](images/tsne_pca.png)
-
-### 2. K-Means Analysis
+###  K-Means Analysis
 Determinazione del numero ottimale di cluster e caratterizzazione dei gruppi.
 
 | Elbow Method | Analisi delle Features (Medie) |
 | :---: | :---: |
-| ![Elbow Method](images/elbow_method.png) | ![Features per Cluster](images/cluster_features.png) |
+| ![Elbow Method](images/ElbowMethod.png) | ![Features per Cluster](images/cluster_features.png) |
 
-**Visualizzazione 3D dei Cluster (K-Means):**
-![K-Means 3D Plot](images/kmeans_3d.png)
+**Visualizzazione 2D dei Cluster (K-Means):**
+![K-Means 3D Plot](images/k-meansResults.png)
 
-### 3. Clustering basato sulla densità (DBSCAN & HDBSCAN)
-Confronto con algoritmi che gestiscono il rumore e forme non sferiche.
-![DBSCAN Result](images/dbscan_3d.png)
