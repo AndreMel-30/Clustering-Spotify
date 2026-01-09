@@ -1,4 +1,4 @@
-# 🎵 Spotify Tracks Clustering Analysis
+# Spotify Tracks Clustering Analysis
 
 Questo progetto applica tecniche di **Machine Learning non supervisionato** per analizzare un dataset di brani Spotify. L'obiettivo è esplorare alcune caratteristiche audio (come *danceability*, *energy*, *acousticness*) e raggruppare i brani in cluster significativi utilizzando diversi algoritmi.
 
@@ -55,3 +55,25 @@ Esegui lo script principale da terminale:
 
 ```bash
 python clustering_analysis.py
+
+## Risultati e Visualizzazioni
+
+Di seguito sono riportati i grafici generati dalla pipeline di analisi.
+
+### 1. Riduzione Dimensionale
+Visualizzazione preliminare del dataset proiettato in 2D utilizzando PCA e t-SNE.
+![t-SNE Projection](images/tsne_pca.png)
+
+### 2. K-Means Analysis
+Determinazione del numero ottimale di cluster e caratterizzazione dei gruppi.
+
+| Elbow Method | Analisi delle Features (Medie) |
+| :---: | :---: |
+| ![Elbow Method](images/elbow_method.png) | ![Features per Cluster](images/cluster_features.png) |
+
+**Visualizzazione 3D dei Cluster (K-Means):**
+![K-Means 3D Plot](images/kmeans_3d.png)
+
+### 3. Clustering basato sulla densità (DBSCAN & HDBSCAN)
+Confronto con algoritmi che gestiscono il rumore e forme non sferiche.
+![DBSCAN Result](images/dbscan_3d.png)
