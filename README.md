@@ -61,7 +61,7 @@ Determinazione del numero ottimale di cluster e caratterizzazione dei gruppi.
 ### 2. Analisi delle Features
 Confronto delle caratteristiche medie per ogni cluster individuato.
 
-![Features per Cluster](images/clusterFeatures.png)
+![Features per Cluster](clusterFeatures.png)
 
 ### 3. Visualizzazione 3D
 Rappresentazione tridimensionale dei cluster finali.
